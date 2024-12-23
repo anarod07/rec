@@ -1,0 +1,212 @@
+/* Geral */
+body {
+    font-family: 'Comfortaa', sans-serif; /* fonte da página */
+    margin: 0; /* remove as margens padrão para poder cobrir a tela */
+    background-color: #8a1e62;
+}
+/* título da página */
+h1 {
+    color: #ffffff;
+}
+
+/* Contêiner principal */
+.login-container {
+    display: flex; /* alinha itens lado a lado */
+    justify-content: center; /* centraliza */
+    align-items: center; /* centraliza os itens */
+    width: 100%; /* ocupa 100% da largura */
+    height: 100%; /* ocupa 100% da altura */
+}
+
+/* Cartão de conteúdo */
+.login-card {
+    background-color: #ffffff; /* cor de fundo do cartão */
+    padding: 30px 40px; /* tamanho interno do cartão */
+    border-radius: 20px; /* arrendonda as bordas do cartão */
+    box-shadow: 0 4px 8px #000000a5; /* sombra */
+    max-width: 400px; /* largura máxima do cartão */
+    width: 100%; /* ocupa 100% da altura */
+    text-align: center; /* alinha o texto no centro do cartão */
+}
+
+/* Título e texto */
+.login-card h1 {
+    color: #8a1e62; /* cor da fonte */
+    font-size: 2rem; /* tamanho da fonte */
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    font-size: 1rem; /* tamanho da fonte */
+    margin-bottom: 20px;
+    color: #000000; /* cor da fonte */
+}
+
+/* Grupos de inputs */
+input {
+    background-color:#e6e5e3; /* cor de fundo do input */
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left; /* alinha o texto para a esquerda */
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem; /* tamanho da fonte */
+}
+
+.input-group input, .input-group select {
+    width: 95%; /* ocupa 95% da largura */
+    padding: 8px; /* tamanho interno do input */
+    align-items: center; /* centraliza os itens */
+    border: 1px solid #e6e5e3;
+    border-radius: 5px; /* arredonda as bordas do input */
+    font-size: 1rem; /* tamanho da letra */
+    outline: none;
+    transition: border-color 0.3s; /* transição de cores */
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: #8a1e62;
+}
+
+/* Botão */
+.btn {
+    background-color: #8a1e62; /* cor de fundo do botão */
+    color: #e6e5e3; /* cor da fonte */
+    padding: 10px 20px; /* tamanho do espaço interno do botão */
+    border: none; /* tira a borda */
+    border-radius: 5px; /* arredonda as bordas do botão */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* tempo da transição de cor */
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #57123d; /* cor de fundo do botão depois da transição */
+}
+
+a {
+    text-decoration: none; /* tira o sublinhado do link */
+    color: #ffffff; /* cor da fonte */
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.form-section, .table-section {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #8a1e62;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+table th, table td {
+    padding: 5px;
+    border: 1px solid #e6e5e3;
+    text-align: center;
+}
+
+table td {
+    font-size: 12px;
+    text-align: left !important;
+}
+
+td .actions {
+    display: flex;
+    justify-content: center;
+    gap: 5px;  /* Espaçamento entre os botões */
+}
+
+table th {
+    background-color: #e6e5e3;
+    color: #8a1e62;
+}
+
+table tr:nth-child(even) {
+    background-color: #e6e5e3;
+}
+
+.btn-edit, .btn-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn-edit i {
+    color: #b42b82;
+}
+
+.btn-delete i {
+    color: #000000;
+}
+
+.btn-edit:hover {
+    background-color: #ffcae2;
+}
+
+.btn-delete:hover {
+    background-color: #ffcae2;
+}
+
+.submit {
+    background-color: #8a1e62; /* cor de fundo do botão */
+    color: #e6e5e3; /* cor da fonte */
+    padding: 10px 20px; /* tamanho do espaço interno do botão */
+    border: none; /* tira a borda */
+    border-radius: 5px; /* arredonda as bordas do botão */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* tempo da transição de cor */
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #57123d; /* cor de fundo do botão depois da transição */
+}
+
+a {
+    text-decoration: none; /* tira o sublinhado do link */
+    color: #ffffff; /* cor da fonte */
+}

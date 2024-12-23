@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de viagens</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--flash messages-->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            <div class="{{ category }}">{{ message }}</div>
+        {% endfor %}
+    {% endwith %}
+    
+    <style>
+        /* estilo das flash messages */
+        .success {
+            color: green;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .error {
+            color: red;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .info {
+            color: blue;
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .star-rating {
+            display: flex;
+            direction: row;
+            justify-content: center;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 2rem;
+            color: lightgray;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .star-rating input:checked ~ label {
+            color: gold;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: gold;
+        }
+    </style>
+
+    <!--conteúdo da página-->
+    <center><h1>Seja bem-vindo(a) ao seu Diário de viagens, <br> um lugar para guardar todas as suas aventuras!</h1></center>
+
+    <br><br>
+
+    <section id="cadastro">
+        <div class="login-container">
+            <div class="login-card">
+                <h1>Cadastro</h1>
+                <p>Para começar, cadastre uma jornada e veja sua história pelo mundo ganhar vida</p>
+                <form method="POST">
+                    <div class="input-group">
+                        <label for="destino">Seu Destino</label>
+                        <input type="text" id="destino" name="destino" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="data">Data</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Descrição da sua experiência</label>
+                        <input type="text" id="descricao" name="descricao" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="nota">Nota</label>
+                        <form action="/submit" method="post">
+                            <div class="star-rating">
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1">&#9733;</label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2">&#9733;</label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3">&#9733;</label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4">&#9733;</label>
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5">&#9733;</label>
+                            </div>
+                    </div>
+                    <button type="submit" class="btn"><a href="{{ url_for ('home.diario') }}">Cadastrar</a> </button>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <br><br>
+
+</body>
+</html>

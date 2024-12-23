@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acesso Negado</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+body {
+font-family: 'Comfortaa', sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+background-color: #f4f4f9;
+text-align: center;
+}
+.container {
+max-width: 600px;
+padding: 20px;
+}
+h1 {
+font-size: 48px;
+color: #e63946;
+}
+p {
+font-size: 18px;
+color: #555;
+}
+a {
+color: #e63946;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>ERRO 500</h1>
+<p>Oops! Parece que ocorreu um erro interno</p>
+<p><a href="{{ url_for('home.cadastro') }}">Voltar para a página inicial</a></p>
+</div>
+</body>
+</html>
